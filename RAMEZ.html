@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>مترجم احترافي</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="box">
+
+<h2 class="text-center mb-4">🌍 مترجم احترافي</h2>
+<h4 class="text-center mb-4" style="color: white;">اختر اللغات اولاً</h4>
+
+<div class="row mb-3">
+  <div class="col-md-6">
+    <select id="from" class="form-select">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+    </select>
+  </div>
+
+  <div class="col-md-6">
+    <select id="to" class="form-select">
+      <option value="ar">العربية</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+    </select>
+  </div>
+</div>
+
+<div class="row g-3">
+  <div class="col-md-6">
+    <textarea id="input" class="form-control" oninput="countWords(); translateText()"placeholder="✍️ اكتب هنا..."></textarea>
+    <p class="mt-2 text-light">
+  عدد الكلمات: <span id="wordCount">0</span>
+</p>
+  </div>
+
+  <div class="col-md-6">
+    <textarea id="output" class="form-control" placeholder="✨ الترجمة..." readonly></textarea>
+  </div>
+</div>
+
+<div class="text-center mt-4">
+  <button class="btn btn-custom me-2" onclick="translateText()">
+    <i class="fas fa-language"></i> ترجمة
+  </button>
+
+  <button class="btn btn-custom me-2" onclick="swapText()">
+    <i class="fas fa-exchange-alt"></i>
+  </button>
+
+  <button class="btn btn-custom" onclick="copyText()">
+    <i class="fas fa-copy"></i>
+  </button>
+</div>
+
+</div>
+
+
+
+<script src="js.js"></script>
+
+</body>
+</html>
